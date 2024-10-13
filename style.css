@@ -1,0 +1,128 @@
+:root {
+  --headings-clr: hsl(212, 21%, 14%);
+  --secondary-clr: hsl(158, 36%, 37%);
+  --bg-clr: hsl(30, 38%, 92%);
+  --secondary-bg-clr: hsl(0, 0%, 100%);
+  --text-clr: hsl(228, 12%, 48%);
+  --secondary-ff: 'Fraunces', serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ? from https://www.joshwcomeau.com/css/custom-css-reset/ */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-clr);
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 1rem;
+  /* ? margin:1rem; to create spacing to show the card better on smaller screens */
+}
+
+.container {
+  background-color: var(--secondary-bg-clr);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 600px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.content {
+  padding: 1.5rem;
+  display: grid;
+  gap: 0.93rem;
+  /* !(display:grid;)this makes the spacing better idk why  */
+}
+
+.type {
+  color: var(--text-clr);
+  font-size: 0.894rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 6px;
+}
+
+.title {
+  /* margin-top: 12px; */
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--headings-clr);
+  font-family: var(--secondary-ff);
+  line-height: 1.1;
+  padding-right: 1rem;
+}
+
+.description {
+  /* margin: 20px 0; */
+  font-size: 0.875rem;
+  color: var(--text-clr);
+  line-height: 1.4;
+}
+
+.prices {
+  /* margin-right: -20px; */
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 0.98rem;
+  font-family: var(--secondary-ff);
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--secondary-clr);
+}
+
+.original_price {
+  font-size: 0.89rem;
+  color: var(--text-clr);
+}
+
+.add {
+  background-color: var(--secondary-clr);
+  color: white;
+  padding: 10px 67px;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-family: var(--secondary-ff);
+  font-weight: 500;
+  /* padding-top: 1rem; */
+  font-size: 1.1rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 624px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 85%;
+    /* ! specifing a certain width for the container to take less size than the original might be unecessery */
+    margin: 0 auto;
+  }
+
+}
