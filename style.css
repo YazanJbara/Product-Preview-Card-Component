@@ -24,11 +24,11 @@ h6 {
   overflow-wrap: break-word;
 }
 
-
-
 img {
   max-width: 100%;
   display: block;
+  height: 100%;
+  object-fit: cover;
 }
 
 body {
@@ -37,8 +37,10 @@ body {
   display: grid;
   place-content: center;
   min-height: 100vh;
-  margin: 1rem;
-  /* ? margin:1rem; to create spacing to show the card better on smaller screens */
+  padding: 1rem;
+  /* ? margin:1rem; to create spacing to show the card better on smaller screens 
+     ! someone adviced me to make it padding instead of margins
+  */
 }
 
 .container {
@@ -120,14 +122,13 @@ body {
   gap: 10px;
 }
 
-@media (max-width: 510px) {
+@media (max-width: 500px) {
   .container {
     display: grid;
     grid-template-columns: 1fr;
-    max-width: 90%;
+    max-width: 100%;
     /* ! specifing a certain width for the container to take less size than the original might be unecessery */
     margin: 0 auto;
     /* ! might be unecessary too , i putted this to center the container on mobile devices */
   }
-
 }
