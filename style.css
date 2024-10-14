@@ -105,7 +105,7 @@ body {
 .add {
   background-color: var(--secondary-clr);
   color: white;
-  padding: 10px 67px;
+  padding: 10px;
   border: none;
   border-radius: 9px;
   cursor: pointer;
@@ -113,16 +113,21 @@ body {
   font-weight: 500;
   /* padding-top: 1rem; */
   font-size: 1.1rem;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
-@media (max-width: 624px) {
+@media (max-width: 510px) {
   .container {
     display: grid;
     grid-template-columns: 1fr;
-    max-width: 85%;
+    max-width: 90%;
     /* ! specifing a certain width for the container to take less size than the original might be unecessery */
     margin: 0 auto;
+    /* ! might be unecessary too , i putted this to center the container on mobile devices */
   }
 
 }
