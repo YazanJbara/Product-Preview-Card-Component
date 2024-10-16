@@ -31,6 +31,17 @@ img {
   object-fit: cover;
 }
 
+.content img {
+  height: unset;
+  object-fit: contain;
+  position: absolute;
+  margin-top: 4px;
+  
+  /* ? only position absolute that dose not make the svg damage the spacing
+     ! i don't know why  
+  */
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: var(--bg-clr);
