@@ -29,6 +29,7 @@ img {
   display: block;
   height: 100%;
   object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 .content img {
@@ -36,7 +37,7 @@ img {
   object-fit: contain;
   position: absolute;
   margin-top: 4px;
-  
+
   /* ? only position absolute that dose not make the svg damage the spacing
      ! i don't know why  
   */
@@ -54,13 +55,20 @@ body {
   */
 }
 
-.container {
+/* .container {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 1rem;
+} */
+
+.product {
   background-color: var(--secondary-bg-clr);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 600px;
   border-radius: 0.5rem;
-  overflow: hidden;
+  /* overflow: hidden; */
+  position: relative;
 }
 
 .content {
@@ -133,8 +141,55 @@ body {
   gap: 10px;
 }
 
+.second .description {
+  color: #6a6b62;
+}
+
+.second .price {
+  color: #992f06;
+}
+
+.second .original_price {
+  color: #4a4943;
+}
+
+.second .add {
+  background-color: #992f06;
+}
+
+.btn_icon {
+  height: 24px;
+  width: 24px;
+  stroke: var(--bg-clr);
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--secondary-clr);
+  border: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next {
+  right: -18px;
+}
+
+.prev {
+  left: -18px;
+}
+
 @media (max-width: 500px) {
-  .container {
+  .product {
     display: grid;
     grid-template-columns: 1fr;
     max-width: 100%;
