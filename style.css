@@ -48,7 +48,7 @@ body {
   background-color: var(--bg-clr);
   display: grid;
   place-content: center;
-  min-height: 100vh;
+  min-height: 100dvh;
   padding: 1rem;
   /* ? margin:1rem; to create spacing to show the card better on smaller screens 
      ! someone adviced me to make it padding instead of margins
