@@ -7,12 +7,13 @@ const productSecond = document.querySelector('.product.second');
 product.style.display = 'grid';
 productSecond.style.display = 'none';
 
-prevBtn.addEventListener('click', () => {
-  product.style.display = 'none';
-  productSecond.style.display = 'grid';
-});
-
-nextBtn.addEventListener('click', () => {
-  productSecond.style.display = 'grid'; // Show the second product
-  product.style.display = 'none'; // Hide the first product
-});
+function tog() {
+  console.log(product.style.display);
+  if (product.style.display == 'none') {
+    product.style.display = 'grid';
+    productSecond.style.display = 'none';
+  } else {
+    product.style.display = 'none';
+    productSecond.style.display = 'grid';
+  }
+}

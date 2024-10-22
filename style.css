@@ -180,6 +180,11 @@ body {
   justify-content: center;
 }
 
+.second .prev ,
+.second .next  {
+  background-color: #992f06;
+}
+
 .next {
   right: -18px;
 }
